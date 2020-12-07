@@ -1,0 +1,33 @@
+// JavaScript Document
+//home
+
+var mygallery=new simpleGallery({
+	wrapperid: "simplegallery6", //ID of main gallery container,
+	dimensions: [737, 237], //width/height of gallery in pixels. Should reflect dimensions of the imagenes exactly
+	imagearray: [
+
+
+        //["imagenes/covid-peñalisa.jpg", "https://www.colsubsidio.com/afiliados/corporativo/medidas-adoptadas-por-colsubsidio-frente-al-covid-19.html", "&nbsp;", "&nbsp;"],
+        ["imagenes/PEN.jpg","https://transacciones.colsubsidio.com/ryt/hoteles/?cityId=2&hotelId=1", "&nbsp;", "&nbsp;"],
+        ["imagenes/ReaperturaPenalisa.jpg"],
+      	//["imagenes/Plan-Turistico-Colsubsidio-Banner2.jpg", "#", "&nbsp;", "&nbsp;"],
+		["imagenes/banner_penalisa2.jpg", "#", "&nbsp;", "&nbsp;"],
+		["imagenes/banner_penalisa3.jpg", "#", "&nbsp;", "&nbsp;"],
+		["imagenes/banner_penalisa4.jpg", "#", "&nbsp;", "&nbsp;"],
+		["imagenes/banner_penalisa5.jpg", "#", "&nbsp;", "&nbsp;"]
+		
+		
+		
+	],
+	autoplay: [true, 4500, 50], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 1000, //transition duration (milliseconds)
+	oninit:function(){ //event that fires when gallery has initialized/ ready to run
+		//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
+	},
+	onslide:function(curslide, i){ //event that fires after each slide is shown
+		//Keyword "this": references current gallery instance
+		//curslide: returns DOM reference to current slide's DIV (ie: try alert(curslide.innerHTML)
+		//i: integer reflecting current image within collection being shown (0=1st image, 1=2nd etc)
+	}
+})

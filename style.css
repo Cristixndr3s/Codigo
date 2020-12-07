@@ -1,30 +1,32 @@
-body {
-  color: #2c3e50;
-  background: #fff;
-}
-h1 {
+
+#acordeon h1 {
   text-align: center;
 
 }
-.half {
+
+#acordeon label {
+  margin-right: 0px;
+
+}
+#acordeon .half {
   float: left;
   width: 100%;
   padding: 0 1em;
 }
 /* Acordeon styles */
-.tab {
+#acordeon .tab {
   position: relative;
   margin-bottom: 1px;
-  width: 95%;
+  width: 100%;
   color: #414141;
   overflow: hidden;
 }
-.tab input {
+#acordeon .tab input {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
-.tab label {
+#acordeon .tab label {
   position: relative;
   display: block;
   padding: 0 0 0 1em;
@@ -33,10 +35,10 @@ h1 {
   line-height: 3;
   cursor: pointer;
 }
-.blue label {
+#acordeon .blue label {
   background: #2980b9;
 }
-.tab-content {
+#acordeon .tab-content {
   max-height: 0;
   overflow: hidden;
   background: #f4f3f3;
@@ -44,19 +46,19 @@ h1 {
   -o-transition: max-height .35s;
   transition: max-height .35s;
 }
-.blue .tab-content {
+#acordeon .blue .tab-content {
   background: #3498db;
 }
-.tab-content p {
+#acordeon .tab-content p {
   margin: 1em;
 }
 /* :checked */
-.tab input:checked ~ .tab-content {
+#acordeon .tab input:checked ~ .tab-content {
   max-height: 100vh;
 }
 
 /* Icon */
-.tab label::after {
+#acordeon .tab label::after {
   position: absolute;
   right: 0;
   top: 0;
@@ -69,15 +71,15 @@ h1 {
   -o-transition: all .35s;
   transition: all .35s;
 }
-.tab input[type=checkbox] + label::after {
+#acordeon .tab input[type=checkbox] + label::after {
   content: "+";
 }
-.tab input[type=radio] + label::after {
+#acordeon .tab input[type=radio] + label::after {
   content: "\25BC";
 }
-.tab input[type=checkbox]:checked + label::after {
+#acordeon .tab input[type=checkbox]:checked + label::after {
   transform: rotate(315deg);
 }
-.tab input[type=radio]:checked + label::after {
+#acordeon .tab input[type=radio]:checked + label::after {
   transform: rotateX(180deg);
 }
